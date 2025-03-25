@@ -11,8 +11,8 @@ const SendPushNotification = async () => {
 
   const data = {
     to: `ExponentPushToken[${pushId}]`,
-    title: "hello",
-    body: "world"
+    title: "Clock Out Reminder",
+    body: "Time to clock out :)",
   };
 
   axios.post('https://exp.host/--/api/v2/push/send', data, {
