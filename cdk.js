@@ -23,7 +23,6 @@ class ClockoutBackendStack extends Stack {
             day: '*',
             month: '*',
             year: '*',
-            weekDay: '?',
             }),
             timeZone: 'America/Chicago', // Set the desired timezone
         });
