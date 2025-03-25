@@ -39,4 +39,5 @@ jobs:
           
           # Install AWS CDK globally and deploy the CDK stack
           npm install -g aws-cdk
+          cdk bootstrap
           cdk deploy --app "node cdk.js"
