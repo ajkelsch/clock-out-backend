@@ -1,24 +1,13 @@
 {
-  "name": "clock-out-backend",
+  "name": "clock-out-backend-lambda",
   "version": "1.0.0",
   "description": "backend services for the Clock Out app",
-  "homepage": "https://github.com/ajkelsch/clock-out-backend#readme",
-  "bugs": {
-    "url": "https://github.com/ajkelsch/clock-out-backend/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ajkelsch/clock-out-backend.git"
-  },
-  "license": "ISC",
-  "author": "",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.185.0",
     "axios": "^1.8.4",
     "dotenv": "^16.4.7"
   }
