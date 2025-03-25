@@ -9,7 +9,7 @@ on:
     branches: [ main ]
 
 env:
-  AWS_REGION : "us-east-1" #Change to reflect your Region
+  AWS_REGION : "us-east-2" #Change to reflect your Region
   DEVICE_PUSH_ID: ${{ secrets.DEVICE_PUSH_ID }}
 
 # Permission can be added at job level or workflow level    
@@ -39,5 +39,5 @@ jobs:
           
           # Install AWS CDK globally and deploy the CDK stack
           npm install -g aws-cdk
-          cdk bootstrap aws://806575005518/us-east-1
+          cdk bootstrap aws://806575005518/us-east-2
           cdk deploy --app "node cdk.js"
