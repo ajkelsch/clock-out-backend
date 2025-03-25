@@ -17,7 +17,7 @@ class ClockoutBackendStack extends Stack {
 
         // Define cron
         const rule = new cdk.aws_events.Rule(this, 'Rule', {
-            schedule: cdk.aws-events.Schedule.cron({
+            schedule: cdk.aws_events.Schedule.cron({
             minute: '30',
             hour: '16',
             day: '*',
