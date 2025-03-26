@@ -1,4 +1,4 @@
-const axios = require('./node_modules/axios/index.d.cts');
+const axios = require('axios');
 require('dotenv').config();
 
 
