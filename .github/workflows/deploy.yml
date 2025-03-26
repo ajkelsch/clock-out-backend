@@ -35,8 +35,10 @@ jobs:
       - name: Bundle Lambda and Deploy CDK
         run: |
           npm install
+          cd ./lambda
+          npm install
+          cd ..
           export DEVICE_PUSH_ID=$DEVICE_PUSH_ID
           
-          # Install AWS CDK globally and deploy the CDK stack
           npm install -g aws-cdk
           cdk deploy --app "node cdk.js" --require-approval never

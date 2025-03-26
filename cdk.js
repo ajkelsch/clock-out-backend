@@ -7,12 +7,15 @@ class ClockoutBackendStack extends Stack {
     constructor(scope, id, props) {
         super(scope, id, props);
 
-        // TODO: Define the Lambda function
+        // Define the Lambda function
         const myFunction = new lambda.Function(this, 'SendPushNotification', {
             runtime: lambda.Runtime.NODEJS_22_X,
             handler: 'index.lambdaFunction',
             code: lambda.Code.fromAsset('lambda'),
             timeout: Duration.seconds(10),
+            environment: {
+                DEVICE_PUSH_ID: process.env.DEVICE_PUSH_ID,
+            },
         });
 
         // Define cron
