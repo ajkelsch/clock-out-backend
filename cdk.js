@@ -23,7 +23,9 @@ class ClockoutBackendStack extends Stack {
             schedule: cdk.aws_events.Schedule.cron({
             minute: '30',
             hour: '16',
-            day: '*',
+            // day: '*',
+            // should yield Monday to Friday
+            weekDay: '1-5',
             month: '*',
             year: '*',
             }),
