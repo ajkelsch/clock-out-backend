@@ -3,7 +3,19 @@ require('dotenv').config();
 
 
 const lambdaFunction = async (event, context) => {
-  await SendPushNotification();
+  try {
+    await SendPushNotification();
+    return {
+      statusCode: 200,
+      body: JSON.stringify('Push notification sent successfully!'),
+    };
+  } catch (error) {
+    console.error('Error sending push notification:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify('Failed to send push notification'),
+    };
+  }
 };
 
 const SendPushNotification = async () => {
