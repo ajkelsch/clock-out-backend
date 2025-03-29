@@ -27,17 +27,12 @@ const SendPushNotification = async () => {
     body: "Time to clock out :)",
   };
 
-  axios.post('https://exp.host/--/api/v2/push/send', data, {
+  const response = await axios.post('https://exp.host/--/api/v2/push/send', data, {
     headers: {
       'Content-Type': 'application/json'
     }
-  })
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
   });
+  console.log(response.data);
 };
 
 module.exports = { lambdaFunction };
